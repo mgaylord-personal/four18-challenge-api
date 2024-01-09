@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" Version="11.7.1" />
+        <PackageReference Include="Microsoft.Identity.Web" Version="2.13.3" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Helpers\" />
+        <Folder Include="Validators\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Four18.Challenge.Data\Four18.Challenge.Data.csproj" />
+      <ProjectReference Include="..\Four18.Common\Four18.Common.csproj" />
+    </ItemGroup>
+
+</Project>
