@@ -14,7 +14,7 @@
 
 # 418 challenge project structure
 
-Four18.Challenge.WebApi contains the web api startup and configuration, middleware, and controllers (e.g. http endpoints)
-Four18.Challenge.Business contains the services and busisness rules (e.g. data validation) and data mapping to and from webapi and data layers
-Four18.Challenge.Data contains the data repository (e.g. in-memory database) 
-Four18.Common.* contains common code used in the API stack and is used for multiple api solutions.  Note that the common libraries are ment to be a NuGet package to be used by the multiple api projects.
+1. Four18.Challenge.WebApi contains the web api startup and configuration, middleware, and controllers (e.g. http endpoints)
+2. Four18.Challenge.Business contains the services and busisness rules (e.g. data validation) and data mapping to and from webapi and data layers
+3. Four18.Challenge.Data contains the data repository (e.g. in-memory database)
+4. Four18.Common.* contains common code used in the API stack and is used for multiple api solutions.  Note that the common libraries are ment to be a NuGet package to be used by the multiple api projects.
