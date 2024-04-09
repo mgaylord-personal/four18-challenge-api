@@ -1,6 +1,6 @@
 # 418 challenge notes
 1. This code was modified from my personal projects developed over many years
-2. Solution struture is designed to isolate endpoints, services, and data
+2. Solution structure is designed to isolate endpoints, services, and data
 3. Data layer uses in-memory database for simplicity 
 4. Docker is not enabled, but could be with a little more effort
 5. Authentication and Authorization is disabled, but can easily be configured IDP's like Azure Entra ID or Azure B22
