@@ -27,25 +27,25 @@ public class CustomerController : ResultController {
     [HttpGet]
     [ProducesResponseType(200, Type = typeof(IEnumerable<CustomerDto>))]
     //[AuthorizeAction(SecurityActions.CustomerView)]
-    public async Task<IActionResult> GetAllClients() {
+    public async Task<IActionResult> GetAll() {
         Logger.LogInformation(LoggingHelper.GetLogClassMethodWithParams(),
-            nameof(CustomerController), nameof(GetAllClients));
+            nameof(CustomerController), nameof(GetAll));
         return ResolveResult(await _service.GetAllAsync());
     }
 
     /// <summary>
     ///     Gets a Customer by its Identifier
     /// </summary>
-    /// <param name="id">Client identifier for <see cref="CustomerDto" /></param>
+    /// <param name="id">Customer identifier for <see cref="CustomerDto" /></param>
     /// <returns>
     ///     <see cref="CustomerDto" />
     /// </returns>
     [HttpGet("{id:int}")]
     [ProducesResponseType(200, Type = typeof(CustomerDto))]
     //[AuthorizeAction(SecurityActions.CustomerView)]
-    public async Task<IActionResult> GetClientById([FromRoute] int id) {
+    public async Task<IActionResult> GetById([FromRoute] int id) {
         Logger.LogInformation(LoggingHelper.GetLogClassMethodWithParams(nameof(id)),
-            nameof(CustomerController), nameof(GetClientById), id);
+            nameof(CustomerController), nameof(GetById), id);
         return ResolveResult(await _service.GetByIdAsync(id));
     }
 
@@ -72,7 +72,7 @@ public class CustomerController : ResultController {
     /// <summary>
     ///     Delete a Customer by its identifier.
     /// </summary>
-    /// <param name="id">Client identifier for <see cref="CustomerDto" /></param>
+    /// <param name="id">Customer identifier for <see cref="CustomerDto" /></param>
     /// <returns>No Content</returns>
     [HttpDelete("{id:int}")]
     [ProducesResponseType(404)]
